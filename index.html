@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khóa biểu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .schedule-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .time-header {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px 8px;
+            font-size: 12px;
+            border-right: 1px solid #34495e;
+        }
+        
+        .subject-cell {
+            padding: 8px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 500;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        /* Subject colors */
+        .startup { background-color: #9b59b6; }
+        .cpp { background-color: #3498db; }
+        .algorithm { background-color: #e74c3c; }
+        .math { background-color: #e67e22; }
+        .onschool { background-color: #e74c3c; }
+        .break { background-color: #95a5a6; color: #2c3e50; }
+        .watch { background-color: #3498db; }
+        .sleep { background-color: #9b59b6; }
+        .reading { background-color: #9b59b6; }
+        .chemistry_physics { background-color: #27ae60; }
+        .ielts { background-color: #f39c12; }
+        .guitar { background-color: #16a085; }
+        .gym { background-color: #27ae60; }
+        .hiit { background-color: #27ae60; }
+        .calisthenics { background-color: #27ae60; }
+        .arduino { background-color: #3498db; }
+        .cad { background-color: #e74c3c; }
+        .prepare { background-color: #9b59b6; }
+        .review { background-color: #95a5a6; color: #2c3e50; }
+        .hsg { background-color: #8e44ad; }
+        .game { background-color: #ff6b6b; }
+        
+        .subject-icon {
+            margin-right: 4px;
+            font-size: 12px;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px 8px;
+            font-size: 13px;
+        }
+        
+        .title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">THỜI KHÓA BIỂU</h1>
+    
+    <div class="schedule-container">
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <td class="time-header">THỜI GIAN</td>
+                    <td class="day-header">THỨ 2</td>
+                    <td class="day-header">THỨ 3</td>
+                    <td class="day-header">THỨ 4</td>
+                    <td class="day-header">THỨ 5</td>
+                    <td class="day-header">THỨ 6</td>
+                    <td class="day-header">THỨ 7</td>
+                    <td class="day-header">CHỦ NHẬT</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-header">4:30-6:00</td>
+                    <td class="subject-cell math">📊 Toán</td>
+                    <td class="subject-cell chemistry_physics">🧪 Hóa/Lý</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                    <td class="subject-cell math">📊 Toán</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                    <td class="subject-cell algorithm">🔥 Thuật toán</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                </tr>
+                <tr>
+                    <td class="time-header">6:00-7:30</td>
+                    <td class="subject-cell startup">🔥 Khởi động sáng</td>
+                    <td class="subject-cell startup">🔥 Khởi động sáng</td>
+                    <td class="subject-cell startup">🔥 Khởi động sáng</td>
+                    <td class="subject-cell startup">🔥 Khởi động sáng</td>
+                    <td class="subject-cell startup">🔥 Khởi động sáng</td>
+                    <td class="subject-cell startup">🔥 Khởi động sáng</td>
+                    <td class="subject-cell startup">🔥 Khởi động sáng</td>
+                </tr>
+                <tr>
+                    <td class="time-header">7:30-11:30</td>
+                    <td class="subject-cell onschool">🏫 Học trên trường</td>
+                    <td class="subject-cell onschool">🏫 Học trên trường</td>
+                    <td class="subject-cell onschool">🏫 Học trên trường</td>
+                    <td class="subject-cell onschool">🏫 Học trên trường</td>
+                    <td class="subject-cell onschool">🏫 Học trên trường</td>
+                    <td class="subject-cell hsg">🏆 Đội tuyển HSG</td>
+                    <td class="subject-cell break">🛌 Ngủ</td>
+                </tr>
+                <tr>
+                    <td class="time-header">11:30-12:00</td>
+                    <td class="subject-cell game">🎮 Chơi game</td>
+                    <td class="subject-cell watch">Xem phim</td>
+                    <td class="subject-cell reading">📖 Đọc sách</td>
+                    <td class="subject-cell game">🎮 Chơi game</td>
+                    <td class="subject-cell reading">📖 Đọc sách</td>
+                    <td class="subject-cell game">🎮 Chơi game</td>
+                    <td class="subject-cell watch">Xem phim</td>
+                </tr>
+                <tr>
+                    <td class="time-header">12:00-12:30</td>
+                    <td class="subject-cell sleep">😴 Ngủ</td>
+                    <td class="subject-cell sleep">😴 Ngủ</td>
+                    <td class="subject-cell sleep">😴 Ngủ</td>
+                    <td class="subject-cell sleep">😴 Ngủ</td>
+                    <td class="subject-cell sleep">😴 Ngủ</td>
+                    <td class="subject-cell sleep">😴 Ngủ</td>
+                    <td class="subject-cell sleep">😴 Ngủ</td>
+                </tr>
+                <tr>
+                    <td class="time-header">12:30-13:00</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                    <td class="subject-cell break">💤 Buffer</td>
+                </tr>
+                <tr>
+                    <td class="time-header">13:30-16:30</td>
+                    <td class="subject-cell onschool">🏫 Học trên trường</td>
+                    <td class="subject-cell onschool">🏫 Học trên trường</td>
+                    <td class="subject-cell onschool">🏫 Học trên trường</td>
+                    <td class="subject-cell onschool">🏫 Học trên trường</td>
+                    <td class="subject-cell chemistry_physics">🧪 Hóa/Lý</td>
+                    <td class="subject-cell cpp">💻 C++</td>
+                    <td class="subject-cell break">Buffer</td>
+                </tr>
+                <tr>
+                    <td class="time-header">16:30-18:00</td>
+                    <td class="subject-cell guitar">🎸 Guitar</td>
+                    <td class="subject-cell guitar">🎸 Guitar</td>
+                    <td class="subject-cell guitar">🎸 Guitar</td>
+                    <td class="subject-cell guitar">🎸 Guitar</td>
+                    <td class="subject-cell guitar">🎸 Guitar</td>
+                    <td class="subject-cell guitar">🎸 Guitar</td>
+                    <td class="subject-cell break">💤 Buffer/Thư giãn</td>
+                </tr>
+                <tr>
+                    <td class="time-header">18:00-19:00</td>
+                    <td class="subject-cell gym">🏋️ Gym</td>
+                    <td class="subject-cell calisthenics">🤸 Calisthenics</td>
+                    <td class="subject-cell cad">🖥️ CAD</td>
+                    <td class="subject-cell gym">🏋️ Gym</td>
+                    <td class="subject-cell arduino">🤖 Arduino</td>
+                    <td class="subject-cell hiit">Hiit</td>
+                    <td class="subject-cell break">💤 Buffer/Thư giãn</td>
+                </tr>
+                <tr>
+                    <td class="time-header">19:30-20:15</td>
+                    <td class="subject-cell review">📝 Ôn tập (Anki + Review)</td>
+                    <td class="subject-cell review">📝 Ôn tập (Anki + Review)</td>
+                    <td class="subject-cell review">📝 Ôn tập (Anki + Review)</td>
+                    <td class="subject-cell review">📝 Ôn tập (Anki + Review)</td>
+                    <td class="subject-cell review">📝 Ôn tập (Anki + Review)</td>
+                    <td class="subject-cell review">📝 Ôn tập (Anki + Review)</td>
+                    <td class="subject-cell review">📝 Ôn tập (Anki + Review)</td>
+                </tr>
+                <tr>
+                    <td class="time-header">20:15-21:00</td>
+                    <td class="subject-cell break">💤 Buffer/Thư giãn</td>
+                    <td class="subject-cell break">💤 Buffer/Thư giãn</td>
+                    <td class="subject-cell break">💤 Buffer/Thư giãn</td>
+                    <td class="subject-cell break">💤 Buffer/Thư giãn</td>
+                    <td class="subject-cell ielts">📚 IELTS</td>
+                    <td class="subject-cell ielts">📚 IELTS</td>
+                    <td class="subject-cell ielts">📚 IELTS</td>
+                </tr>
+                <tr>
+                    <td class="time-header">21:15-21:45</td>
+                    <td class="subject-cell prepare">🎒 Chuẩn bị</td>
+                    <td class="subject-cell prepare">🎒 Chuẩn bị</td>
+                    <td class="subject-cell prepare">🎒 Chuẩn bị</td>
+                    <td class="subject-cell prepare">🎒 Chuẩn bị</td>
+                    <td class="subject-cell prepare">🎒 Chuẩn bị</td>
+                    <td class="subject-cell prepare">🎒 Chuẩn bị</td>
+                    <td class="subject-cell prepare">🎒 Chuẩn bị</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
