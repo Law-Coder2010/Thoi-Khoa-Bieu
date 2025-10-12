@@ -24,7 +24,6 @@
             font-weight: 300;
         }
 
-        /* Desktop - Table Layout */
         .schedule-container {
             background: white;
             border-radius: 10px;
@@ -37,7 +36,6 @@
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
-            display: table;
         }
         
         .time-header {
@@ -48,7 +46,6 @@
             padding: 12px 8px;
             font-size: 12px;
             border-right: 1px solid #34495e;
-            display: table-cell;
         }
         
         .subject-cell {
@@ -58,19 +55,9 @@
             font-weight: 500;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            display: table-cell;
+            position: relative;
         }
         
-        .day-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            padding: 15px 8px;
-            font-size: 13px;
-            display: table-cell;
-        }
-
         /* Subject colors */
         .startup { background-color: #9b59b6; }
         .cpp { background-color: #3498db; }
@@ -93,87 +80,53 @@
         .review { background-color: #95a5a6; color: #2c3e50; }
         .hsg { background-color: #8e44ad; }
         .game { background-color: #ff6b6b; }
+        
+        .day-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px 8px;
+            font-size: 13px;
+        }
 
-        /* Mobile - Card Layout */
+        /* Mobile - Scroll ngang */
         @media (max-width: 768px) {
+            body {
+                margin: 8px;
+                padding: 0;
+            }
+
             .title {
                 font-size: 22px;
                 margin-bottom: 15px;
             }
 
+            .schedule-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
             .schedule-table {
-                display: block;
-            }
-
-            .schedule-table thead {
-                display: none;
-            }
-
-            .schedule-table tbody {
-                display: block;
-            }
-
-            .schedule-table tr {
-                display: block;
-                margin-bottom: 15px;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                overflow: hidden;
-                background: white;
+                min-width: 800px;
             }
 
             .time-header {
-                background-color: #2c3e50;
-                color: white;
-                display: block;
-                padding: 10px;
-                font-size: 13px;
-                font-weight: bold;
-                text-align: left;
-                border: none;
-                border-radius: 8px 8px 0 0;
-            }
-
-            .day-header {
-                display: none;
-            }
-
-            .subject-cell {
-                display: block;
-                padding: 10px;
-                font-size: 12px;
-                border: 1px solid #eee;
-                text-align: left;
-                color: white;
-                margin: 2px;
-                border-radius: 5px;
-            }
-
-            .subject-cell::before {
-                content: "• ";
-                margin-right: 5px;
-            }
-        }
-
-        /* Tablet */
-        @media (min-width: 481px) and (max-width: 768px) {
-            .title {
-                font-size: 24px;
-            }
-
-            .time-header {
-                padding: 8px 5px;
+                padding: 10px 6px;
                 font-size: 11px;
+                min-width: 70px;
             }
 
             .subject-cell {
-                padding: 6px 4px;
+                padding: 8px 6px;
                 font-size: 10px;
+                min-width: 90px;
             }
 
             .day-header {
-                padding: 10px 5px;
-                font-size: 12px;
+                padding: 12px 6px;
+                font-size: 11px;
+                min-width: 90px;
             }
         }
     </style>
